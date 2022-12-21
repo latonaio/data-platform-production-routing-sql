@@ -15,7 +15,7 @@ data-platform-production-routing-sql には、sqlの設定ファイルとして�
 * data-platform-production-routing-sql-sequence-text-data.sql（データ連携基盤 作業手順 - 順序テキストデータ）
 * data-platform-production-routing-sql-operation-text-data.sql（データ連携基盤 作業手順 - 作業テキストデータ）
 * data-platform-production-routing-sql-component-allocation-data.sql（データ連携基盤 作業手順 - 構成品目割当データ）
-* data-platform-production-routing-sql-header-pdf-data.sql（データ連携基盤 作業手順 - PDFデータ)
+* data-platform-production-routing-sql-header-doc-data.sql（データ連携基盤 作業手順 - 文書データ)
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法
 
