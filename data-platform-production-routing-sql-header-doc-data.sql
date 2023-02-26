@@ -1,8 +1,8 @@
 CREATE TABLE `data_platform_production_routing_header_doc_data` -- 新規追加
 (
-  `BusinessPartner`                int(10) NOT NULL,          -- 新規追加
-  `Product`                        int(2) NOT NULL,           -- 新規追加
-  `Plant`                          varchar(4) NOT NULL,       -- 新規追加
+  `BusinessPartner`                int(12) NOT NULL,
+  `Product`                        int(40) NOT NULL,
+  `Plant`                          varchar(4) NOT NULL,
   `DocType`                        varchar(20) NOT NULL,
   `DocVersionID`                   int(4) NOT NULL,
   `DocID`                          varchar(100) NOT NULL,

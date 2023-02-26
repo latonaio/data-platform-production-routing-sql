@@ -1,4 +1,4 @@
-CREATE TABLE `data_platform_production_routing_operation_text_data`
+CREATE TABLE `data_platform_production_routing_operation_data`
 (
   `ProductionRoutingGroup`           varchar(8) NOT NULL,
   `ProductionRouting`                varchar(2) NOT NULL,
@@ -6,12 +6,12 @@ CREATE TABLE `data_platform_production_routing_operation_text_data`
   `ProductionRoutingOpIntID`         varchar(8) NOT NULL,
   `ProductionRoutingOpIntVersion`    varchar(8) NOT NULL,
   `Operation`                        varchar(4) DEFAULT NULL,
-  `CreationDate`                     varchar(80) DEFAULT NULL,
+  `CreationDate`                     date DEFAULT NULL,
   `ChangeNumber`                     varchar(12) DEFAULT NULL,
-  `ValidityStartDate`                varchar(80) DEFAULT NULL,
-  `ValidityEndDate`                  varchar(80) DEFAULT NULL,
+  `ValidityStartDate`                date DEFAULT NULL,
+  `ValidityEndDate`                  date DEFAULT NULL,
   `OperationText`                    varchar(40) DEFAULT NULL,
-  `LongTextLanguageCode`             varchar(2) DEFAULT NULL,
+  `LongTextLanguage`                 varchar(2) DEFAULT NULL,
   `Plant`                            varchar(4) DEFAULT NULL,
   `OperationControlProfile`          varchar(4) DEFAULT NULL,
   `OperationStandardTextCode`        varchar(7) DEFAULT NULL,
@@ -41,20 +41,18 @@ CREATE TABLE `data_platform_production_routing_operation_text_data`
   `MinimumMoveDuration`              varchar(11) DEFAULT NULL,
   `MinimumMoveDurationUnit`          varchar(3) DEFAULT NULL,
   `OpIsExtlyProcdWithSubcontrg`      tinyint(1) DEFAULT NULL,
-  `PurchasingInfoRecord`             varchar(10) DEFAULT NULL,
-  `PurchasingOrganization`           varchar(4) DEFAULT NULL,
-  `PlannedDeliveryDuration`          varchar(4) DEFAULT NULL,
+  `PlannedDeliveryDuration`          int(3) DEFAULT NULL,
   `MaterialGroup`                    varchar(9) DEFAULT NULL,
   `PurchasingGroup`                  varchar(3) DEFAULT NULL,
-  `Supplier`                         varchar(10) DEFAULT NULL,
+  --`Supplier`                         varchar(10) DEFAULT NULL,
   `NumberOfOperationPriceUnits`      varchar(6) DEFAULT NULL,
   `CostElement`                      varchar(10) DEFAULT NULL,
   `OpExternalProcessingPrice`        varchar(13) DEFAULT NULL,
-  `OpExternalProcessingCurrency`     varchar(5) DEFAULT NULL,
-  `OperationScrapPercent`            varchar(7) DEFAULT NULL,
-  `ChangedDateTime`                  varchar(80) DEFAULT NULL,
+  `OpExternalProcessingCurrency`     varchar(3) DEFAULT NULL,
+  `OperationScrapPercent`            float(6) DEFAULT NULL,
+  `ChangedDateTime`                  time DEFAULT NULL,
   `PlainLongText`                    varchar(220) DEFAULT NULL,
     PRIMARY KEY (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingSequence`, `ProductionRoutingOpIntID`, `ProductionRoutingOpIntVersion`)
-    CONSTRAINT `DataPlatformProductionRoutingOperationTextData_fk` FOREIGN KEY (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`) REFERENCES `sap_production_routing_header_data` (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`)
+    CONSTRAINT `DataPlatformProductionRoutingOperationData_fk` FOREIGN KEY (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`) REFERENCES `sap_production_routing_header_data` (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
