@@ -16,6 +16,6 @@ CREATE TABLE `data_platform_production_routing_header_doc_data` -- 新規追加
     CONSTRAINT `DataPlatformProductionRoutingHeaderDocData_fk` FOREIGN KEY (`BusinessPartner`, `Product`, `Plant`) REFERENCES `data_platform_production_routing_header_data` (`BusinessPartner`, `Product`, `Plant`),
     CONSTRAINT `DataPlatformProductionRoutingHeaderDocDataDocType_fk` FOREIGN KEY (`DocType`) REFERENCES `data_platform_doc_type_doc_type_data` (`DocType`),
     CONSTRAINT `DataPlatformProductionRoutingHeaderDocDataDocIssuerBusinessPartner_fk` FOREIGN KEY (`DocIssuerBusinessPartner`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`)
-    
+        
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

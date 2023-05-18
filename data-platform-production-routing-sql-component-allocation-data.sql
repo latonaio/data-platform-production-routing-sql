@@ -11,13 +11,14 @@ CREATE TABLE `data_platform_production_routing_component_allocation_data`
   `BillOfMaterialVariant`          varchar(2) DEFAULT NULL,
   `BillOfMaterialItemNodeNumber`   varchar(8) DEFAULT NULL,
   `MatlCompIsMarkedForBackflush`   tinyint(1) DEFAULT NULL,
-  `CreationDate`                   varchar(80) DEFAULT NULL,
-  `LastChangeDate`                 varchar(80) DEFAULT NULL,
-  `ValidityStartDate`              varchar(80) DEFAULT NULL,
-  `ValidityEndDate`                varchar(80) DEFAULT NULL,
+  `CreationDate`                   date DEFAULT NULL,
+  `LastChangeDate`                 date DEFAULT NULL,
+  `ValidityStartDate`              date DEFAULT NULL,
+  `ValidityEndDate`                date DEFAULT NULL,
   `ChangeNumber`                   varchar(12) DEFAULT NULL,
-  `ChangedDateTime`                varchar(80) DEFAULT NULL,
+  `ChangedDateTime`                datetime DEFAULT NULL,
     PRIMARY KEY (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingSequence`, `ProductionRoutingOpIntID`)
     CONSTRAINT `DataPlatformProductionRoutingComponentAllocationData_fk` FOREIGN KEY (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`) REFERENCES `sap_production_routing_header_data` (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`)
+
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

@@ -44,7 +44,7 @@ CREATE TABLE `data_platform_production_routing_operation_data`
   `PlannedDeliveryDuration`          int(3) DEFAULT NULL,
   `MaterialGroup`                    varchar(9) DEFAULT NULL,
   `PurchasingGroup`                  varchar(3) DEFAULT NULL,
-  --`Supplier`                         varchar(10) DEFAULT NULL,
+  -- `Supplier`                         varchar(10) DEFAULT NULL,
   `NumberOfOperationPriceUnits`      varchar(6) DEFAULT NULL,
   `CostElement`                      varchar(10) DEFAULT NULL,
   `OpExternalProcessingPrice`        varchar(13) DEFAULT NULL,
@@ -54,5 +54,6 @@ CREATE TABLE `data_platform_production_routing_operation_data`
   `PlainLongText`                    varchar(220) DEFAULT NULL,
     PRIMARY KEY (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingSequence`, `ProductionRoutingOpIntID`, `ProductionRoutingOpIntVersion`)
     CONSTRAINT `DataPlatformProductionRoutingOperationData_fk` FOREIGN KEY (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`) REFERENCES `sap_production_routing_header_data` (`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`)
+
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

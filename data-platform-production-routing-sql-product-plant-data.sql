@@ -14,5 +14,6 @@ CREATE TABLE `data_platform_production_routing_product_plant_data`
   `ChangeNumber`                     varchar(12) DEFAULT NULL,
     PRIMARY KEY (`BusinessPartner`, `Product`, `Plant`, `ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingMatlAssgmt`, `ProductionRtgMatlAssgmtIntVers`)
     CONSTRAINT `DataPlatformProductionRoutingProductPlantData_fk` FOREIGN KEY (`BusinessPartner`, `ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`) REFERENCES `sap_production_routing_header_data` (`BusinessPartner`, `ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`)
+
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

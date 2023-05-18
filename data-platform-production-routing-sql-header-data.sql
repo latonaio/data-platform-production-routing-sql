@@ -19,7 +19,7 @@ CREATE TABLE `data_platform_production_routing_header_data`
     `ValidityEndDate`               date DEFAULT NULL,
     `ChangeNumber`                  varchar(12) DEFAULT NULL,
     `PlainLongText`                 varchar(200) DEFAULT NULL,
-    `MaterialAssignment`            varchar(80) DEFAULT NULL,  --新規追加
+    `MaterialAssignment`            varchar(80) DEFAULT NULL,  -- 新規追加
     PRIMARY KEY (`BusinessPartner`,`ProductionRoutingGroup`, `ProductionRouting`, `ProductionRoutingInternalVers`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
